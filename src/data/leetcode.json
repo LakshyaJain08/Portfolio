@@ -1,0 +1,55 @@
+{
+  "username": "ShubhamxGupta",
+  "profileUrl": "https://leetcode.com/u/ShubhamxGupta/",
+  "updatedAt": "2026-09-29T03:48:00.972Z",
+  "ranking": 60912,
+  "reputation": 887,
+  "totalSolved": 832,
+  "totalQuestions": 4068,
+  "acceptanceRate": 84.8,
+  "easy": {
+    "solved": 486,
+    "total": 968
+  },
+  "medium": {
+    "solved": 295,
+    "total": 2121
+  },
+  "hard": {
+    "solved": 51,
+    "total": 979
+  },
+  "contest": {
+    "rating": 1934,
+    "globalRanking": 32362,
+    "topPercentage": 3.78,
+    "attendedContests": 43,
+    "badge": "Knight"
+  },
+  "calendar": {
+    "streak": 59,
+    "totalActiveDays": 271
+  },
+  "topBadges": [
+    {
+      "id": "10298744",
+      "displayName": "Knight",
+      "icon": "/static/images/badges/knight.png"
+    },
+    {
+      "id": "10561082",
+      "displayName": "365 Days Badge",
+      "icon": "https://assets.leetcode.com/static_assets/marketing/lg365.png"
+    },
+    {
+      "id": "10667004",
+      "displayName": "200 Days Badge 2026",
+      "icon": "https://assets.leetcode.com/static_assets/others/200_1080_1080.png"
+    },
+    {
+      "id": "10114195",
+      "displayName": "100 Days Badge 2026",
+      "icon": "https://assets.leetcode.com/static_assets/others/100_1080_1080.png"
+    }
+  ]
+}
