@@ -109,4 +109,26 @@ export const projectsData: Project[] = [
         outcome:
             "Accelerated reporting turnaround by 28% and achieved 99% reporting accuracy with star-schema data models.",
     },
+    {
+        id: "retail-marketing-analysis",
+        title: "Retail & Marketing Analytics (Customer Segmentation & CLV)",
+        description:
+            "Strategic business analytics system uncovering customer lifecycle behavior through RFM segmentation, K-Means clustering, cohort retention analysis, and CLV/CAC modeling across $1.07M revenue.",
+        image: "/images/projects/retail-marketing-analysis.png",
+        link: "https://github.com/LakshyaJain08/Retail-and-Marketing-Analysis",
+        github: "https://github.com/LakshyaJain08/Retail-and-Marketing-Analysis",
+        tags: [
+            "Business Analysis",
+            "Customer Segmentation",
+            "RFM Analysis",
+            "Cohort Analysis",
+            "Customer Lifetime Value (CLV)",
+            "Business Intelligence",
+        ],
+        techStack: ["Python", "Pandas", "Scikit-Learn", "K-Means", "PCA", "Seaborn", "Plotly", "EDA"],
+        problem:
+            "Unsegmented retail sales data obscured high-value customer drivers, leaving at-risk customer churn unmonitored and marketing budget unoptimized.",
+        outcome:
+            "Segmented 1,986 customers into actionable tiers (VIP cohort driving 66.2% of revenue), analyzed 89.1% retention rate, and established a 150.4x CLV/CAC acquisition efficiency ratio.",
+    },
 ];

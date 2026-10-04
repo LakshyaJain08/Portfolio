@@ -84,6 +84,7 @@ export default function Terminal() {
                     <ul className="list-disc list-inside space-y-0.5 text-stone-300">
                         <li>Adaptive Corrective Self-RAG (ACSRAG) — Corrective RAG with query rewriting</li>
                         <li>HealthFlow — Clinical AI, No-Show Prediction & NLP Triage</li>
+                        <li>Retail & Marketing Analytics — RFM Segmentation, CLV & Cohort Analysis</li>
                         <li>Multi-Objective Traffic Signal Optimization — MARL with PPO and SUMO</li>
                         <li>PlantDoc Fine-Grained CV — Multi-branch PyTorch with attention fusion</li>
                         <li>Automated Power BI & KPI Analytics — SLA monitoring & star-schema models</li>

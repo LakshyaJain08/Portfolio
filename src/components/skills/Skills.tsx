@@ -104,10 +104,10 @@ const skillClusters: SkillCluster[] = [
                 description: "Classification, clustering, feature importance, predictive customer churn modeling (BCG simulation)",
             },
             {
-                name: "Recommendation Systems",
+                name: "Clinical AI & Predictive Modeling",
                 iconName: "scikitlearn",
-                badge: "Personalization",
-                description: "Collaborative & content filtering, matrix factorization, Precision@K, RMSE, cold-start mitigation",
+                badge: "Data Science",
+                description: "Supervised no-show classification (88.4% AUC), NLP clinical symptom triage, demand forecasting (HealthFlow)",
             },
             {
                 name: "Time-Series Forecasting",
