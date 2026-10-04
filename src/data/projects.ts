@@ -62,9 +62,9 @@ export const projectsData: Project[] = [
         title: "Walmart Sales Forecasting & Demand Analytics",
         description:
             "End-to-end time-series forecasting pipeline using LightGBM, Optuna tuning, and SARIMA modeling across 5 retail stores.",
-        image: "/images/projects/claw-machine.png",
-        link: "#projects",
-        github: "https://github.com",
+        image: "/images/projects/walmart-forecasting.png",
+        link: "https://github.com/LakshyaJain08/Walmart-Sales-Forecasting",
+        github: "https://github.com/LakshyaJain08/Walmart-Sales-Forecasting",
         tags: [
             "Data Analytics",
             "Time-Series",
