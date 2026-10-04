@@ -92,7 +92,7 @@ export const projectsData: Project[] = [
         title: "Operational SLA Analytics (Microsoft & AICTE)",
         description:
             "Automated Power BI operational dashboard and SQL validation pipeline tracking SLAs across 15,000+ enterprise records.",
-        image: "/images/projects/hug-bunny.png",
+        image: "/images/projects/powerbi-analytics.png",
         link: "#projects",
         github: "https://github.com",
         tags: ["Business Intelligence", "Power BI", "Data Modeling", "SQL"],
