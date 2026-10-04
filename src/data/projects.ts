@@ -47,7 +47,7 @@ export const projectsData: Project[] = [
         title: "Multi-Branch PlantDoc CV Classifier",
         description:
             "Deep learning perception architecture integrating spatial, contextual, interaction-aware, and wavelet-based feature extraction.",
-        image: "/images/projects/wifi-card.png",
+        image: "/images/projects/plantdoc-cv.jpg",
         link: "#projects",
         github: "https://github.com",
         tags: ["Computer Vision", "Deep Learning", "PyTorch", "XAI"],

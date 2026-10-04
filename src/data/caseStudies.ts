@@ -59,6 +59,7 @@ export const caseStudies: CaseStudy[] = [
         id: "plantdoc-cv",
         title: "Multi-Branch Deep Learning Perception for Plant Disease Classification",
         description: "Designing a robust multi-branch CNN architecture with attention fusion for fine-grained agricultural disease diagnosis.",
+        heroImage: "/images/projects/plantdoc-cv.jpg",
         role: "Deep Learning & CV Researcher",
         timeline: "Jul 2025 - Sep 2025",
         tags: ["Computer Vision", "PyTorch", "Deep Learning", "Attention Fusion", "Explainable AI"],
