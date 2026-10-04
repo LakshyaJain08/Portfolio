@@ -23,6 +23,7 @@ export const caseStudies: CaseStudy[] = [
         id: "acsrag",
         title: "Adaptive Corrective Self-RAG (ACSRAG)",
         description: "Architecting an enterprise-grade retrieval pipeline with adaptive query rewriting, Reciprocal Rank Fusion, and active hallucination guardrails.",
+        heroImage: "/images/projects/acsrag.png",
         role: "AI Engineer & Lead Architect",
         timeline: "Oct 2025 - Dec 2025",
         tags: ["Agentic AI", "Self-RAG", "CRAG", "Vector Search", "Hybrid Retrieval", "LangChain"],

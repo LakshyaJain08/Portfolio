@@ -17,9 +17,9 @@ export const projectsData: Project[] = [
         title: "Adaptive Corrective Self-RAG (ACSRAG)",
         description:
             "A high-precision Corrective RAG pipeline engineering adaptive query rewriting, web-search fallbacks, and claim-evidence verification.",
-        image: "/images/projects/giftbound.png",
-        link: "#projects",
-        github: "https://github.com",
+        image: "/images/projects/acsrag.png",
+        link: "https://adaptive-corrective-self-rag.onrender.com/",
+        github: "https://github.com/LakshyaJain08/Adaptive_Corrective_Self_Rag",
         tags: ["Agentic AI", "LLMs", "RAG", "Vector Search"],
         techStack: ["LangChain", "Vector DB", "BM25", "Cross-Encoder", "FastAPI"],
         problem:
@@ -73,19 +73,19 @@ export const projectsData: Project[] = [
             "Achieved 69% baseline accuracy, optimized hyperparameter tuning with Optuna, and modeled seasonal demand dynamics.",
     },
     {
-        id: "recsys",
-        title: "Personalized Hybrid Recommendation System",
+        id: "healthflow",
+        title: "HealthFlow — Clinical AI & Predictive Healthcare Platform",
         description:
-            "Personalized ranking engine combining collaborative filtering, content-based filtering, and matrix factorization.",
-        image: "/images/projects/giftbound.png",
-        link: "#projects",
-        github: "https://github.com",
-        tags: ["Machine Learning", "Recommendation Systems", "Personalization"],
-        techStack: ["Python", "Scikit-learn", "Matrix Factorization", "Precision@K", "RMSE"],
+            "Clinical data science platform featuring supervised appointment no-show prediction (GBM/RF), NLP symptom triage with urgency scoring, and 30-day departmental demand forecasting.",
+        image: "/images/projects/healthflow.png",
+        link: "https://github.com/LakshyaJain08/healthflow",
+        github: "https://github.com/LakshyaJain08/healthflow",
+        tags: ["Data Science", "Healthcare AI", "Predictive Analytics", "NLP"],
+        techStack: ["Python", "FastAPI", "Scikit-Learn", "Gradient Boosting", "NLP (TF-IDF)", "Pandas"],
         problem:
-            "Cold-start latency and sparse user-item interaction matrices degraded personalized discovery.",
+            "Unpredictable patient no-show rates (~20-30%) and uncalibrated manual triage cause severe physician downtime, operational revenue loss, and emergency misallocations.",
         outcome:
-            "Boosted recommendation precision by 24%, reduced prediction error by 18%, and enhanced diversity by 22%.",
+            "Built end-to-end ML pipeline with 88.4% ROC-AUC on no-show classification, automated symptom-to-specialty triage, and 30-day multi-horizon capacity planning.",
     },
     {
         id: "powerbi-analytics",
