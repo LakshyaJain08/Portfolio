@@ -26,7 +26,7 @@ export const caseStudies: CaseStudy[] = [
         heroImage: "/images/projects/acsrag.png",
         role: "AI Engineer & Lead Architect",
         timeline: "Oct 2025 - Dec 2025",
-        tags: ["Agentic AI", "Self-RAG", "CRAG", "Vector Search", "Hybrid Retrieval", "LangChain"],
+        tags: ["Agentic AI", "LangGraph", "Reranker", "Self-RAG", "CRAG", "Vector Search", "Hybrid Retrieval", "LangChain"],
         problem:
             "Standard single-pass RAG pipelines fail under ambiguous queries, irrelevant vector retrieval, and lack self-correction, causing severe hallucination rates exceeding 30% in high-stakes domain search.",
         constraints: [

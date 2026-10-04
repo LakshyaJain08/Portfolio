@@ -20,8 +20,8 @@ export const projectsData: Project[] = [
         image: "/images/projects/acsrag.png",
         link: "https://adaptive-corrective-self-rag.onrender.com/",
         github: "https://github.com/LakshyaJain08/Adaptive_Corrective_Self_Rag",
-        tags: ["Agentic AI", "LLMs", "RAG", "Vector Search"],
-        techStack: ["LangChain", "Vector DB", "BM25", "Cross-Encoder", "FastAPI"],
+        tags: ["Agentic AI", "LangGraph", "Reranker", "RAG", "Vector Search", "LLMs"],
+        techStack: ["LangGraph", "LangChain", "Cross-Encoder Reranker", "BM25", "Vector DB", "FastAPI"],
         problem:
             "Standard RAG models suffer from hallucination and severe context degradation on ambiguous user prompts.",
         outcome:
@@ -65,8 +65,15 @@ export const projectsData: Project[] = [
         image: "/images/projects/claw-machine.png",
         link: "#projects",
         github: "https://github.com",
-        tags: ["Time-Series", "Predictive Analytics", "Machine Learning", "Forecasting"],
-        techStack: ["LightGBM", "Optuna", "SARIMA", "Python", "Pandas"],
+        tags: [
+            "Data Analytics",
+            "Time-Series",
+            "Predictive Analytics",
+            "Exploratory Data Analysis (EDA)",
+            "Demand Forecasting",
+            "Statistical Modeling",
+        ],
+        techStack: ["LightGBM", "Optuna", "SARIMA", "Python", "Pandas", "Statistical Analysis"],
         problem:
             "Fluctuating multi-store retail demand and complex seasonal variations caused inventory forecasting errors.",
         outcome:
