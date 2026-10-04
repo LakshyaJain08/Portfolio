@@ -96,7 +96,7 @@ export default function RootLayout({
                         url: "https://shubhamxgupta.github.io",
                         jobTitle: "AI & ML Engineer | Data Scientist",
                         sameAs: [
-                            "https://github.com/ShubhamxGupta",
+                            "https://github.com/LakshyaJain08",
                             "https://www.linkedin.com/in/shubhamxgupta",
                         ],
                         knowsAbout: [

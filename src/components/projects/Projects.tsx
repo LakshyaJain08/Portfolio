@@ -46,7 +46,7 @@ export default function Projects() {
 
                 <div className="text-center mt-12">
                     <a
-                        href="https://github.com/ShubhamxGupta"
+                        href="https://github.com/LakshyaJain08"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 transition-colors group"

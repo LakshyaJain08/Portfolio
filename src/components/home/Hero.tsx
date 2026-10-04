@@ -176,7 +176,7 @@ export default function Hero() {
                     <div className="flex items-center gap-2">
                         <Magnetic strength={0.2}>
                             <a
-                                href="https://github.com"
+                                href="https://github.com/LakshyaJain08"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="GitHub Profile"

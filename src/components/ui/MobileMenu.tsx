@@ -12,7 +12,7 @@ import {Linkedin} from "@/components/ui/LinkedinIcon";
 import {Mail} from "lucide-react";
 
 export const SOCIALS = [
-    {name: "GitHub", href: "https://github.com", icon: SiGithub},
+    {name: "GitHub", href: "https://github.com/LakshyaJain08", icon: SiGithub},
     {name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin},
     {name: "X (Twitter)", href: "https://x.com", icon: SiX},
     {name: "Email", href: "mailto:lakshyajain2085@gmail.com", icon: Mail},

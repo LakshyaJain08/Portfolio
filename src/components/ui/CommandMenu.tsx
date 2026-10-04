@@ -186,7 +186,7 @@ export function CommandMenu() {
                                         onSelect={() =>
                                             runCommand(() =>
                                                 window.open(
-                                                    "https://github.com/ShubhamxGupta",
+                                                    "https://github.com/LakshyaJain08",
                                                     "_blank",
                                                     "noopener,noreferrer"
                                                 )

@@ -58,7 +58,7 @@ export default function Footer() {
                 {/* Social Channels */}
                 <div className="flex items-center gap-3 z-10 mb-8 mt-2">
                     <SocialLink
-                        href="https://github.com"
+                        href="https://github.com/LakshyaJain08"
                         icon={<SiGithub size={18} />}
                         label="GitHub Profile"
                     />
