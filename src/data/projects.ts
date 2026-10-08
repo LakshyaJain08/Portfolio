@@ -114,7 +114,7 @@ export const projectsData: Project[] = [
         description:
             "Strategic business analytics system uncovering customer lifecycle behavior through RFM segmentation, K-Means clustering, cohort retention analysis, and CLV/CAC modeling across $1.07M revenue.",
         image: "/images/projects/retail-marketing-analysis.png",
-        link: "https://github.com/LakshyaJain08/Retail-and-Marketing-Analysis",
+        link: "https://drive.google.com/drive/folders/1v5TSnQS5tQ2G4zreIGke3NFn3TTi54Ie?usp=sharing",
         github: "https://github.com/LakshyaJain08/Retail-and-Marketing-Analysis",
         tags: [
             "Business Analysis",
