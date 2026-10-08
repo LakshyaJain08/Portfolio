@@ -5,6 +5,7 @@ import {motion, AnimatePresence} from "framer-motion";
 import {ArrowRight, FileText, Sparkles, TrendingDown, TrendingUp, ShieldCheck, BarChart3, ArrowUpRight} from "lucide-react";
 import Link from "next/link";
 import {Magnetic} from "@/components/ui/Magnetic";
+import {getAssetPath} from "@/lib/imageLoader";
 
 const ROLES = [
     { title: "AI Engineer", article: "an" },
@@ -247,7 +248,7 @@ export default function Hero() {
 
                     <Magnetic strength={0.15}>
                         <a
-                            href="/LakshyaJain_Resume.pdf"
+                            href={getAssetPath("/LakshyaJain_Resume.pdf")}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 h-11 px-5 rounded-xl bg-stone-100/90 dark:bg-[#1c1917]/90 hover:bg-stone-200/80 dark:hover:bg-[#292524] text-stone-800 dark:text-stone-200 font-medium text-sm border border-stone-200/80 dark:border-stone-800/80 transition-all duration-200 active:scale-95 shadow-xs shrink-0"

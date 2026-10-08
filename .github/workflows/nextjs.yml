@@ -43,8 +43,9 @@ jobs:
 
       - name: Determine Base Path
         run: |
-          REPO_NAME="${{ github.event.repository.name }}"
-          OWNER="${{ github.repository_owner }}"
+          REPO_FULL="${{ github.repository }}"
+          REPO_NAME="${REPO_FULL#*/}"
+          OWNER="${REPO_FULL%/*}"
           if [ "$REPO_NAME" = "$OWNER.github.io" ]; then
             echo "NEXT_PUBLIC_BASE_PATH=" >> $GITHUB_ENV
           else

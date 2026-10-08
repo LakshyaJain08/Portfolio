@@ -7,6 +7,7 @@ import {experienceData, ExperienceItem} from "@/data/experience";
 import {clsx} from "clsx";
 import Image from "next/image";
 import {Briefcase, GraduationCap, Download, CheckCircle2, Sparkles} from "lucide-react";
+import {getAssetPath} from "@/lib/imageLoader";
 
 export default function Experience() {
     const [filter, setFilter] = useState<"all" | "work" | "education">("all");
@@ -137,7 +138,6 @@ export default function Experience() {
                                             alt={item.company}
                                             width={44}
                                             height={44}
-                                            unoptimized
                                             className="object-cover w-full h-full"
                                         />
                                     </div>
@@ -189,7 +189,7 @@ export default function Experience() {
                 {/* Download Complete Resume Button */}
                 <div className="mt-14 text-center">
                     <a
-                        href="/LakshyaJain_Resume.pdf"
+                        href={getAssetPath("/LakshyaJain_Resume.pdf")}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-7 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm rounded-xl shadow-md shadow-indigo-600/25 transition-all active:scale-95"

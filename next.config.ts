@@ -7,7 +7,8 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const nextConfig: NextConfig = {
     output: "export",
     images: {
-        unoptimized: true,
+        loader: "custom",
+        loaderFile: "./src/lib/imageLoader.ts",
     },
     basePath: basePath ? basePath : undefined,
     assetPrefix: basePath ? basePath : undefined,
