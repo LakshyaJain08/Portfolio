@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Lakshya Jain — AI & ML Engineer | Data Scientist",
     description:
         "Personal portfolio of Lakshya Jain — AI Engineer, ML Engineer, Data Scientist, and Data & Business Analyst building intelligent systems and data-driven solutions.",
-    metadataBase: new URL("https://lakshyajain08.github.io/Portfolio"),
+    metadataBase: new URL("https://lakshyajain08.github.io"),
     icons: {
         icon: [
             { url: `${basePath}/favicon.ico` },
