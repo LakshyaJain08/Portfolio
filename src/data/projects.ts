@@ -28,19 +28,41 @@ export const projectsData: Project[] = [
             "Improved answer correctness by 32%, boosted retrieval relevance by 41% (RRF), and reduced hallucinations by 54%.",
     },
     {
-        id: "plantdoc-cv",
-        title: "Multi-Branch PlantDoc CV Classifier",
+        id: "retail-marketing-analysis",
+        title: "Retail & Marketing Analytics (Customer Segmentation & CLV)",
         description:
-            "Deep learning perception architecture integrating spatial, contextual, interaction-aware, and wavelet-based feature extraction.",
-        image: "/images/projects/plantdoc-cv.jpg",
-        link: "#projects",
-        github: "https://github.com",
-        tags: ["Computer Vision", "Deep Learning", "PyTorch", "XAI"],
-        techStack: ["PyTorch", "Torchvision", "Grad-CAM", "SHAP", "OpenCV"],
+            "Strategic business analytics system uncovering customer lifecycle behavior through RFM segmentation, K-Means clustering, cohort retention analysis, and CLV/CAC modeling across $1.07M revenue.",
+        image: "/images/projects/retail-marketing-analysis.png",
+        link: "https://drive.google.com/drive/folders/1v5TSnQS5tQ2G4zreIGke3NFn3TTi54Ie?usp=sharing",
+        github: "https://github.com/LakshyaJain08/Retail-and-Marketing-Analysis",
+        tags: [
+            "Business Analysis",
+            "Customer Segmentation",
+            "RFM Analysis",
+            "Cohort Analysis",
+            "Customer Lifetime Value (CLV)",
+            "Business Intelligence",
+        ],
+        techStack: ["Python", "Pandas", "Scikit-Learn", "K-Means", "PCA", "Seaborn", "Plotly", "EDA"],
         problem:
-            "Fine-grained confusion between visually similar agricultural diseases under uncontrolled field lighting.",
+            "Unsegmented retail sales data obscured high-value customer drivers, leaving at-risk customer churn unmonitored and marketing budget unoptimized.",
         outcome:
-            "Achieved 86% classification accuracy, 80% macro F1-score, and up to 99% accuracy on targeted disease categories.",
+            "Segmented 1,986 customers into actionable tiers (VIP cohort driving 66.2% of revenue), analyzed 89.1% retention rate, and established a 150.4x CLV/CAC acquisition efficiency ratio.",
+    },
+    {
+        id: "powerbi-analytics",
+        title: "Operational SLA Analytics (Microsoft & AICTE)",
+        description:
+            "Automated Power BI operational dashboard and SQL validation pipeline tracking SLAs across 15,000+ enterprise records.",
+        image: "/images/projects/powerbi-analytics.png",
+        link: "https://drive.google.com/file/d/11yZk5lD0SHsFQ260MPCJSfbvxJj3rPMm/view?usp=sharing",
+        github: "https://github.com/LakshyaJain08/TAT_Analytics_Power_BI_Report",
+        tags: ["Business Intelligence", "Power BI", "Data Modeling", "SQL"],
+        techStack: ["Power BI", "SQL", "Star-Schema", "Data Validation", "DAX"],
+        problem:
+            "Manual data compilation caused compliance reporting delays and data discrepancy risks.",
+        outcome:
+            "Accelerated reporting turnaround by 28% and achieved 99% reporting accuracy with star-schema data models.",
     },
     {
         id: "walmart-forecasting",
@@ -80,41 +102,19 @@ export const projectsData: Project[] = [
             "Built end-to-end ML pipeline with 88.4% ROC-AUC on no-show classification, automated symptom-to-specialty triage, and 30-day multi-horizon capacity planning.",
     },
     {
-        id: "powerbi-analytics",
-        title: "Operational SLA Analytics (Microsoft & AICTE)",
+        id: "plantdoc-cv",
+        title: "Multi-Branch PlantDoc CV Classifier",
         description:
-            "Automated Power BI operational dashboard and SQL validation pipeline tracking SLAs across 15,000+ enterprise records.",
-        image: "/images/projects/powerbi-analytics.png",
-        link: "https://drive.google.com/file/d/11yZk5lD0SHsFQ260MPCJSfbvxJj3rPMm/view?usp=sharing",
-        github: "https://github.com/LakshyaJain08/TAT_Analytics_Power_BI_Report",
-        tags: ["Business Intelligence", "Power BI", "Data Modeling", "SQL"],
-        techStack: ["Power BI", "SQL", "Star-Schema", "Data Validation", "DAX"],
+            "Deep learning perception architecture integrating spatial, contextual, interaction-aware, and wavelet-based feature extraction.",
+        image: "/images/projects/plantdoc-cv.jpg",
+        link: "#projects",
+        github: "https://github.com",
+        tags: ["Computer Vision", "Deep Learning", "PyTorch", "XAI"],
+        techStack: ["PyTorch", "Torchvision", "Grad-CAM", "SHAP", "OpenCV"],
         problem:
-            "Manual data compilation caused compliance reporting delays and data discrepancy risks.",
+            "Fine-grained confusion between visually similar agricultural diseases under uncontrolled field lighting.",
         outcome:
-            "Accelerated reporting turnaround by 28% and achieved 99% reporting accuracy with star-schema data models.",
-    },
-    {
-        id: "retail-marketing-analysis",
-        title: "Retail & Marketing Analytics (Customer Segmentation & CLV)",
-        description:
-            "Strategic business analytics system uncovering customer lifecycle behavior through RFM segmentation, K-Means clustering, cohort retention analysis, and CLV/CAC modeling across $1.07M revenue.",
-        image: "/images/projects/retail-marketing-analysis.png",
-        link: "https://drive.google.com/drive/folders/1v5TSnQS5tQ2G4zreIGke3NFn3TTi54Ie?usp=sharing",
-        github: "https://github.com/LakshyaJain08/Retail-and-Marketing-Analysis",
-        tags: [
-            "Business Analysis",
-            "Customer Segmentation",
-            "RFM Analysis",
-            "Cohort Analysis",
-            "Customer Lifetime Value (CLV)",
-            "Business Intelligence",
-        ],
-        techStack: ["Python", "Pandas", "Scikit-Learn", "K-Means", "PCA", "Seaborn", "Plotly", "EDA"],
-        problem:
-            "Unsegmented retail sales data obscured high-value customer drivers, leaving at-risk customer churn unmonitored and marketing budget unoptimized.",
-        outcome:
-            "Segmented 1,986 customers into actionable tiers (VIP cohort driving 66.2% of revenue), analyzed 89.1% retention rate, and established a 150.4x CLV/CAC acquisition efficiency ratio.",
+            "Achieved 86% classification accuracy, 80% macro F1-score, and up to 99% accuracy on targeted disease categories.",
     },
     {
         id: "traffic-marl",
