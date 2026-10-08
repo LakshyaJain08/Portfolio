@@ -2,7 +2,7 @@
 
 import {useEffect, useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
-import {ArrowRight, FileText, Award, Code2, Cpu} from "lucide-react";
+import {ArrowRight, FileText, Sparkles, TrendingDown, ShieldCheck, BarChart3, ArrowUpRight} from "lucide-react";
 import Link from "next/link";
 import {Magnetic} from "@/components/ui/Magnetic";
 
@@ -14,7 +14,17 @@ const ROLES = [
     { title: "Business Analyst", article: "a" },
 ];
 
-function AnimatedCounter({value, suffix = ""}: {value: number; suffix?: string}) {
+function AnimatedCounter({
+    value,
+    decimals = 0,
+    prefix = "",
+    suffix = "",
+}: {
+    value: number;
+    decimals?: number;
+    prefix?: string;
+    suffix?: string;
+}) {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
@@ -24,7 +34,7 @@ function AnimatedCounter({value, suffix = ""}: {value: number; suffix?: string})
             if (!startTime) startTime = timestamp;
             const progress = Math.min((timestamp - startTime) / duration, 1);
             const easeOut = 1 - Math.pow(1 - progress, 3);
-            setCount(Math.floor(easeOut * value));
+            setCount(easeOut * value);
             if (progress < 1) {
                 requestAnimationFrame(step);
             }
@@ -35,10 +45,67 @@ function AnimatedCounter({value, suffix = ""}: {value: number; suffix?: string})
 
     return (
         <span className="tabular-nums font-bold tracking-tight">
-            {count.toLocaleString()}{suffix}
+            {prefix}
+            {decimals > 0 ? count.toFixed(decimals) : Math.floor(count).toLocaleString()}
+            {suffix}
         </span>
     );
 }
+
+const IMPACT_METRICS = [
+    {
+        id: "traffic-marl",
+        value: 93.1,
+        decimals: 1,
+        prefix: "-",
+        suffix: "%",
+        label: "Traffic Wait Delay",
+        project: "Multi-Agent RL",
+        detail: "PPO in SUMO · 22.5% Fuel Cut",
+        icon: TrendingDown,
+        badgeClass: "text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
+        href: "/#projects",
+    },
+    {
+        id: "acsrag",
+        value: 54,
+        decimals: 0,
+        prefix: "-",
+        suffix: "%",
+        label: "Hallucinations",
+        project: "Adaptive Self-RAG",
+        detail: "LangGraph · +41% Relevance",
+        icon: Sparkles,
+        badgeClass: "text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 border-indigo-500/20",
+        href: "/#projects",
+    },
+    {
+        id: "healthflow",
+        value: 88.4,
+        decimals: 1,
+        prefix: "",
+        suffix: "%",
+        label: "Predictive ROC-AUC",
+        project: "HealthFlow AI",
+        detail: "Clinical No-Show & 30D Forecast",
+        icon: ShieldCheck,
+        badgeClass: "text-rose-600 dark:text-rose-400 bg-rose-500/10 border-rose-500/20",
+        href: "/#projects",
+    },
+    {
+        id: "powerbi-analytics",
+        value: 15000,
+        decimals: 0,
+        prefix: "",
+        suffix: "+",
+        label: "SLA Records Modeled",
+        project: "Power BI & SQL",
+        detail: "+28% Speed · 99% Accuracy",
+        icon: BarChart3,
+        badgeClass: "text-amber-600 dark:text-amber-400 bg-amber-500/10 border-amber-500/20",
+        href: "/#projects",
+    },
+];
 
 export default function Hero() {
     const [roleIndex, setRoleIndex] = useState(0);
@@ -64,7 +131,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
             </div>
 
-            <div className="container max-w-4xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
+            <div className="container max-w-5xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
                 {/* Live Status Pill */}
                 <motion.div
                     initial={{opacity: 0, y: 12}}
@@ -219,50 +286,60 @@ export default function Hero() {
                     </div>
                 </motion.div>
 
-                {/* High-Impact Proof Points (Bento Row) */}
+                {/* High-Impact Proof Points (4-Metric Grid with Live Counters) */}
                 <motion.div
                     initial={{opacity: 0, y: 20}}
                     animate={{opacity: 1, y: 0}}
                     transition={{duration: 0.6, delay: 0.38, ease: [0.23, 1, 0.32, 1]}}
-                    className="mt-14 w-full grid grid-cols-1 sm:grid-cols-3 gap-3.5"
+                    className="mt-14 w-full"
                 >
-                    <div className="p-5 rounded-2xl bg-stone-100/60 dark:bg-[#1c1917]/60 backdrop-blur-xl border border-stone-200/80 dark:border-stone-800/80 flex flex-col items-center justify-center text-center group hover:border-indigo-500/40 transition-colors">
-                        <div className="flex items-center gap-1.5 text-xs font-mono font-medium text-amber-500 mb-1">
-                            <Code2 size={14} />
-                            <span>GenAI &amp; Agentic AI</span>
-                        </div>
-                        <div className="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-[#fafaf9]">
-                            <span>ACSRAG</span>
-                        </div>
-                        <p className="text-xs text-stone-500 dark:text-stone-400 mt-1">
-                            Corrective RAG &amp; Self-RAG · Vector + BM25 RRF
-                        </p>
+                    <div className="flex items-center justify-center gap-2 mb-4">
+                        <span className="relative flex h-1.5 w-1.5">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-indigo-500"></span>
+                        </span>
+                        <span className="text-[11px] font-mono uppercase tracking-wider text-stone-500 dark:text-stone-400 font-semibold">
+                            Quantified Engineering Impact
+                        </span>
                     </div>
 
-                    <div className="p-5 rounded-2xl bg-stone-100/60 dark:bg-[#1c1917]/60 backdrop-blur-xl border border-stone-200/80 dark:border-stone-800/80 flex flex-col items-center justify-center text-center group hover:border-indigo-500/40 transition-colors">
-                        <div className="flex items-center gap-1.5 text-xs font-mono font-medium text-indigo-500 mb-1">
-                            <Cpu size={14} />
-                            <span>Computer Vision Research</span>
-                        </div>
-                        <div className="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-[#fafaf9]">
-                            <span>86% Acc / 80% F1</span>
-                        </div>
-                        <p className="text-xs text-stone-500 dark:text-stone-400 mt-1">
-                            Multi-Branch PyTorch · Attention Fusion
-                        </p>
-                    </div>
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3.5 text-left">
+                        {IMPACT_METRICS.map((item) => {
+                            const IconComponent = item.icon;
+                            return (
+                                <Link
+                                    key={item.id}
+                                    href={item.href}
+                                    className="group relative p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-[#1c1917]/70 backdrop-blur-xl border border-stone-200/80 dark:border-stone-800/80 hover:border-indigo-500/50 dark:hover:border-indigo-500/50 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between overflow-hidden"
+                                >
+                                    <div className="flex items-center justify-between gap-1 mb-2">
+                                        <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] sm:text-[11px] font-mono font-medium border ${item.badgeClass}`}>
+                                            <IconComponent size={11} />
+                                            <span>{item.project}</span>
+                                        </span>
+                                        <ArrowUpRight size={13} className="text-stone-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    </div>
 
-                    <div className="p-5 rounded-2xl bg-stone-100/60 dark:bg-[#1c1917]/60 backdrop-blur-xl border border-stone-200/80 dark:border-stone-800/80 flex flex-col items-center justify-center text-center group hover:border-indigo-500/40 transition-colors">
-                        <div className="flex items-center gap-1.5 text-xs font-mono font-medium text-emerald-500 mb-1">
-                            <Award size={14} />
-                            <span>Cloud &amp; Certifications</span>
-                        </div>
-                        <div className="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-[#fafaf9]">
-                            <span>AWS Certified</span>
-                        </div>
-                        <p className="text-xs text-stone-500 dark:text-stone-400 mt-1">
-                            Machine Learning &amp; Data Engineer Associate
-                        </p>
+                                    <div className="mt-1">
+                                        <div className="font-display text-2xl sm:text-3xl md:text-3xl font-extrabold tracking-tight text-stone-900 dark:text-[#fafaf9]">
+                                            <AnimatedCounter
+                                                value={item.value}
+                                                decimals={item.decimals}
+                                                prefix={item.prefix}
+                                                suffix={item.suffix}
+                                            />
+                                        </div>
+                                        <div className="text-xs sm:text-[13px] font-semibold text-stone-700 dark:text-stone-300 mt-0.5">
+                                            {item.label}
+                                        </div>
+                                    </div>
+
+                                    <p className="text-[11px] text-stone-500 dark:text-stone-400 mt-2 line-clamp-1 border-t border-stone-200/60 dark:border-stone-800/60 pt-2">
+                                        {item.detail}
+                                    </p>
+                                </Link>
+                            );
+                        })}
                     </div>
                 </motion.div>
             </div>
