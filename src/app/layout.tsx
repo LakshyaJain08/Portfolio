@@ -97,7 +97,7 @@ export default function RootLayout({
                         jobTitle: "AI & ML Engineer | Data Scientist",
                         sameAs: [
                             "https://github.com/LakshyaJain08",
-                            "https://www.linkedin.com/in/shubhamxgupta",
+                            "https://www.linkedin.com/in/lakshya-jain-837ab7288/",
                         ],
                         knowsAbout: [
                             "Artificial Intelligence",

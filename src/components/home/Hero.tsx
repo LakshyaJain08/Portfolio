@@ -2,7 +2,7 @@
 
 import {useEffect, useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
-import {ArrowRight, FileText, Sparkles, TrendingDown, ShieldCheck, BarChart3, ArrowUpRight} from "lucide-react";
+import {ArrowRight, FileText, Sparkles, TrendingDown, TrendingUp, ShieldCheck, BarChart3, ArrowUpRight} from "lucide-react";
 import Link from "next/link";
 import {Magnetic} from "@/components/ui/Magnetic";
 
@@ -60,6 +60,7 @@ const IMPACT_METRICS = [
         prefix: "-",
         suffix: "%",
         label: "Hallucinations",
+        discipline: "Agentic AI",
         project: "Adaptive Self-RAG",
         detail: "LangGraph · +41% Relevance",
         icon: Sparkles,
@@ -73,6 +74,7 @@ const IMPACT_METRICS = [
         prefix: "",
         suffix: "%",
         label: "Predictive ROC-AUC",
+        discipline: "Data Science",
         project: "HealthFlow AI",
         detail: "Clinical No-Show & 30D Forecast",
         icon: ShieldCheck,
@@ -86,10 +88,25 @@ const IMPACT_METRICS = [
         prefix: "",
         suffix: "+",
         label: "SLA Records Modeled",
+        discipline: "Data Analytics",
         project: "Power BI & SQL",
         detail: "+28% Speed · 99% Accuracy",
         icon: BarChart3,
         badgeClass: "text-amber-600 dark:text-amber-400 bg-amber-500/10 border-amber-500/20",
+        href: "/#projects",
+    },
+    {
+        id: "retail-marketing-analysis",
+        value: 1.07,
+        decimals: 2,
+        prefix: "$",
+        suffix: "M",
+        label: "Revenue & CLV Modeled",
+        discipline: "Business Analytics",
+        project: "Retail Analytics",
+        detail: "150.4x CLV:CAC · 89.1% Retention",
+        icon: TrendingUp,
+        badgeClass: "text-cyan-600 dark:text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
         href: "/#projects",
     },
     {
@@ -99,6 +116,7 @@ const IMPACT_METRICS = [
         prefix: "-",
         suffix: "%",
         label: "Traffic Wait Delay",
+        discipline: "Reinforcement Learning",
         project: "Multi-Agent RL",
         detail: "PPO in SUMO · 22.5% Fuel Cut",
         icon: TrendingDown,
@@ -258,7 +276,7 @@ export default function Hero() {
 
                         <Magnetic strength={0.2}>
                             <a
-                                href="https://linkedin.com"
+                                href="https://www.linkedin.com/in/lakshya-jain-837ab7288/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="LinkedIn Profile"
@@ -286,7 +304,7 @@ export default function Hero() {
                     </div>
                 </motion.div>
 
-                {/* High-Impact Proof Points (4-Metric Grid with Live Counters) */}
+                {/* High-Impact Proof Points (5-Metric Grid with Live Counters) */}
                 <motion.div
                     initial={{opacity: 0, y: 20}}
                     animate={{opacity: 1, y: 0}}
@@ -303,14 +321,17 @@ export default function Hero() {
                         </span>
                     </div>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3.5 text-left">
-                        {IMPACT_METRICS.map((item) => {
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-3.5 text-left">
+                        {IMPACT_METRICS.map((item, idx) => {
                             const IconComponent = item.icon;
+                            const isLastOnMobile = idx === IMPACT_METRICS.length - 1;
                             return (
                                 <Link
                                     key={item.id}
                                     href={item.href}
-                                    className="group relative p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-[#1c1917]/70 backdrop-blur-xl border border-stone-200/80 dark:border-stone-800/80 hover:border-indigo-500/50 dark:hover:border-indigo-500/50 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between overflow-hidden"
+                                    className={`group relative p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-[#1c1917]/70 backdrop-blur-xl border border-stone-200/80 dark:border-stone-800/80 hover:border-indigo-500/50 dark:hover:border-indigo-500/50 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between overflow-hidden ${
+                                        isLastOnMobile ? "col-span-2 sm:col-span-1" : ""
+                                    }`}
                                 >
                                     <div className="flex items-center justify-between gap-1 mb-2">
                                         <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] sm:text-[11px] font-mono font-medium border ${item.badgeClass}`}>
@@ -321,7 +342,7 @@ export default function Hero() {
                                     </div>
 
                                     <div className="mt-1">
-                                        <div className="font-display text-2xl sm:text-3xl md:text-3xl font-extrabold tracking-tight text-stone-900 dark:text-[#fafaf9]">
+                                        <div className="font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-stone-900 dark:text-[#fafaf9]">
                                             <AnimatedCounter
                                                 value={item.value}
                                                 decimals={item.decimals}

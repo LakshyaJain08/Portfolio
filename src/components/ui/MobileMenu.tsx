@@ -13,7 +13,7 @@ import {Mail} from "lucide-react";
 
 export const SOCIALS = [
     {name: "GitHub", href: "https://github.com/LakshyaJain08", icon: SiGithub},
-    {name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin},
+    {name: "LinkedIn", href: "https://www.linkedin.com/in/lakshya-jain-837ab7288/", icon: Linkedin},
     {name: "X (Twitter)", href: "https://x.com", icon: SiX},
     {name: "Email", href: "mailto:lakshyajain2085@gmail.com", icon: Mail},
 ];

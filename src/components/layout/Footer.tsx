@@ -63,7 +63,7 @@ export default function Footer() {
                         label="GitHub Profile"
                     />
                     <SocialLink
-                        href="https://www.linkedin.com"
+                        href="https://www.linkedin.com/in/lakshya-jain-837ab7288/"
                         icon={<Linkedin size={18} />}
                         label="LinkedIn Profile"
                     />

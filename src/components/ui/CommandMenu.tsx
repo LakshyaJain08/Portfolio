@@ -201,7 +201,7 @@ export function CommandMenu() {
                                         onSelect={() =>
                                             runCommand(() =>
                                                 window.open(
-                                                    "https://linkedin.com/in/shubhamxgupta",
+                                                    "https://www.linkedin.com/in/lakshya-jain-837ab7288/",
                                                     "_blank",
                                                     "noopener,noreferrer"
                                                 )
