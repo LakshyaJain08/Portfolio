@@ -121,7 +121,7 @@ export const projectsData: Project[] = [
         title: "Multi-Objective Traffic Optimization (MARL)",
         description:
             "Multi-Agent Reinforcement Learning framework with PPO across a 4-intersection SUMO network for proactive congestion control.",
-        image: "/images/projects/rubiks-cube.png",
+        image: "/images/projects/traffic-marl.png",
         link: "https://docs.google.com/document/d/1qNZ9KOKzdBHoVyo6pPsM9O8ESiVuN3nX/edit?usp=sharing&ouid=118415578802050278811&rtpof=true&sd=true",
         github: "https://github.com/LakshyaJain08/traffic_light_optimization_using_MARL",
         tags: ["Reinforcement Learning", "MARL", "PPO", "SUMO"],
