@@ -30,11 +30,25 @@ const monoFont = JetBrains_Mono({
     weight: ["400", "500"],
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export const metadata: Metadata = {
     title: "Lakshya Jain — AI & ML Engineer | Data Scientist",
     description:
         "Personal portfolio of Lakshya Jain — AI Engineer, ML Engineer, Data Scientist, and Data & Business Analyst building intelligent systems and data-driven solutions.",
-    metadataBase: new URL("https://shubhamxgupta.github.io"),
+    metadataBase: new URL("https://lakshyajain08.github.io/Portfolio"),
+    icons: {
+        icon: [
+            { url: `${basePath}/favicon.ico` },
+            { url: `${basePath}/favicon-32x32.png`, sizes: "32x32", type: "image/png" },
+            { url: `${basePath}/favicon-16x16.png`, sizes: "16x16", type: "image/png" },
+        ],
+        apple: [
+            { url: `${basePath}/apple-touch-icon.png`, sizes: "180x180", type: "image/png" },
+        ],
+        shortcut: [`${basePath}/favicon.ico`],
+    },
+    manifest: `${basePath}/site.webmanifest`,
     robots: {
         index: true,
         follow: true,
@@ -44,7 +58,7 @@ export const metadata: Metadata = {
         description:
             "AI Engineer, ML Engineer, Data Scientist, and Data & Business Analyst building intelligent systems and data-driven solutions.",
         type: "website",
-        url: "https://shubhamxgupta.github.io",
+        url: "https://lakshyajain08.github.io/Portfolio",
         siteName: "Lakshya Jain",
     },
 };
@@ -58,23 +72,28 @@ export default function RootLayout({
         <html lang="en" className="scroll-smooth" suppressHydrationWarning>
         <head>
             <link
+                rel="icon"
+                href={`${basePath}/favicon.ico`}
+                sizes="any"
+            />
+            <link
                 rel="apple-touch-icon"
                 sizes="180x180"
-                href="/apple-touch-icon.png"
+                href={`${basePath}/apple-touch-icon.png`}
             />
             <link
                 rel="icon"
                 type="image/png"
                 sizes="32x32"
-                href="/favicon-32x32.png"
+                href={`${basePath}/favicon-32x32.png`}
             />
             <link
                 rel="icon"
                 type="image/png"
                 sizes="16x16"
-                href="/favicon-16x16.png"
+                href={`${basePath}/favicon-16x16.png`}
             />
-            <link rel="manifest" href="/site.webmanifest"/>
+            <link rel="manifest" href={`${basePath}/site.webmanifest`}/>
         </head>
         <body
             className={`${displayFont.variable} ${sansFont.variable} ${monoFont.variable} antialiased bg-[#fafaf9] dark:bg-[#0c0a09] text-[#1c1917] dark:text-[#fafaf9] font-sans relative transition-colors duration-300 selection:bg-indigo-500/20 selection:text-indigo-400`}
