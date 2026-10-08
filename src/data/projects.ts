@@ -3,7 +3,7 @@ export interface Project {
     title: string;
     description: string;
     image: string;
-    link: string;
+    link?: string;
     github?: string;
     tags?: string[];
     techStack?: string[];
@@ -33,8 +33,7 @@ export const projectsData: Project[] = [
         description:
             "Multi-Agent Reinforcement Learning framework with PPO across a 4-intersection SUMO network for proactive congestion control.",
         image: "/images/projects/rubiks-cube.png",
-        link: "#projects",
-        github: "https://github.com",
+        github: "https://github.com/LakshyaJain08/traffic_light_optimization_using_MARL",
         tags: ["Reinforcement Learning", "MARL", "PPO", "SUMO"],
         techStack: ["RLlib", "PyTorch", "SUMO", "TraCI", "ARIMA"],
         problem:
@@ -100,8 +99,8 @@ export const projectsData: Project[] = [
         description:
             "Automated Power BI operational dashboard and SQL validation pipeline tracking SLAs across 15,000+ enterprise records.",
         image: "/images/projects/powerbi-analytics.png",
-        link: "#projects",
-        github: "https://github.com",
+        link: "https://drive.google.com/file/d/11yZk5lD0SHsFQ260MPCJSfbvxJj3rPMm/view?usp=sharing",
+        github: "https://github.com/LakshyaJain08/TAT_Analytics_Power_BI_Report",
         tags: ["Business Intelligence", "Power BI", "Data Modeling", "SQL"],
         techStack: ["Power BI", "SQL", "Star-Schema", "Data Validation", "DAX"],
         problem:

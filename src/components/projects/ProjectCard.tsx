@@ -38,15 +38,17 @@ export default function ProjectCard({project, index}: Readonly<ProjectCardProps>
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
                         {project.title}
                     </h3>
-                    <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`View live demo of ${project.title}`}
-                        className="text-slate-400 hover:text-blue-600 transition-colors"
-                    >
-                        <ArrowUpRight size={20} />
-                    </a>
+                    {(project.link || project.github) && (
+                        <a
+                            href={project.link || project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`View live demo of ${project.title}`}
+                            className="text-slate-400 hover:text-blue-600 transition-colors"
+                        >
+                            <ArrowUpRight size={20} />
+                        </a>
+                    )}
                 </div>
 
                 <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">
@@ -66,13 +68,15 @@ export default function ProjectCard({project, index}: Readonly<ProjectCardProps>
             </div>
 
             {/* Full card clickable overlay */}
-            <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Visit project: ${project.title}`}
-                className="absolute inset-0 z-10"
-            />
+            {(project.link || project.github) && (
+                <a
+                    href={project.link || project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit project: ${project.title}`}
+                    className="absolute inset-0 z-10"
+                />
+            )}
         </motion.div>
     );
 }
