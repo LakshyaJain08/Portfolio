@@ -54,19 +54,6 @@ function AnimatedCounter({
 
 const IMPACT_METRICS = [
     {
-        id: "traffic-marl",
-        value: 93.1,
-        decimals: 1,
-        prefix: "-",
-        suffix: "%",
-        label: "Traffic Wait Delay",
-        project: "Multi-Agent RL",
-        detail: "PPO in SUMO · 22.5% Fuel Cut",
-        icon: TrendingDown,
-        badgeClass: "text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
-        href: "/#projects",
-    },
-    {
         id: "acsrag",
         value: 54,
         decimals: 0,
@@ -103,6 +90,19 @@ const IMPACT_METRICS = [
         detail: "+28% Speed · 99% Accuracy",
         icon: BarChart3,
         badgeClass: "text-amber-600 dark:text-amber-400 bg-amber-500/10 border-amber-500/20",
+        href: "/#projects",
+    },
+    {
+        id: "traffic-marl",
+        value: 93.1,
+        decimals: 1,
+        prefix: "-",
+        suffix: "%",
+        label: "Traffic Wait Delay",
+        project: "Multi-Agent RL",
+        detail: "PPO in SUMO · 22.5% Fuel Cut",
+        icon: TrendingDown,
+        badgeClass: "text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
         href: "/#projects",
     },
 ];

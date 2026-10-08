@@ -28,21 +28,6 @@ export const projectsData: Project[] = [
             "Improved answer correctness by 32%, boosted retrieval relevance by 41% (RRF), and reduced hallucinations by 54%.",
     },
     {
-        id: "traffic-marl",
-        title: "Multi-Objective Traffic Optimization (MARL)",
-        description:
-            "Multi-Agent Reinforcement Learning framework with PPO across a 4-intersection SUMO network for proactive congestion control.",
-        image: "/images/projects/rubiks-cube.png",
-        link: "https://docs.google.com/document/d/1qNZ9KOKzdBHoVyo6pPsM9O8ESiVuN3nX/edit?usp=sharing&ouid=118415578802050278811&rtpof=true&sd=true",
-        github: "https://github.com/LakshyaJain08/traffic_light_optimization_using_MARL",
-        tags: ["Reinforcement Learning", "MARL", "PPO", "SUMO"],
-        techStack: ["RLlib", "PyTorch", "SUMO", "TraCI", "ARIMA"],
-        problem:
-            "Fixed-time signals fail to adapt dynamically, escalating carbon emissions and vehicular delay.",
-        outcome:
-            "Achieved 93.1% reduction in waiting time, 22.5% reduction in CO2 emissions, and 22.5% reduction in fuel consumption.",
-    },
-    {
         id: "plantdoc-cv",
         title: "Multi-Branch PlantDoc CV Classifier",
         description:
@@ -130,5 +115,20 @@ export const projectsData: Project[] = [
             "Unsegmented retail sales data obscured high-value customer drivers, leaving at-risk customer churn unmonitored and marketing budget unoptimized.",
         outcome:
             "Segmented 1,986 customers into actionable tiers (VIP cohort driving 66.2% of revenue), analyzed 89.1% retention rate, and established a 150.4x CLV/CAC acquisition efficiency ratio.",
+    },
+    {
+        id: "traffic-marl",
+        title: "Multi-Objective Traffic Optimization (MARL)",
+        description:
+            "Multi-Agent Reinforcement Learning framework with PPO across a 4-intersection SUMO network for proactive congestion control.",
+        image: "/images/projects/rubiks-cube.png",
+        link: "https://docs.google.com/document/d/1qNZ9KOKzdBHoVyo6pPsM9O8ESiVuN3nX/edit?usp=sharing&ouid=118415578802050278811&rtpof=true&sd=true",
+        github: "https://github.com/LakshyaJain08/traffic_light_optimization_using_MARL",
+        tags: ["Reinforcement Learning", "MARL", "PPO", "SUMO"],
+        techStack: ["RLlib", "PyTorch", "SUMO", "TraCI", "ARIMA"],
+        problem:
+            "Fixed-time signals fail to adapt dynamically, escalating carbon emissions and vehicular delay.",
+        outcome:
+            "Achieved 93.1% reduction in waiting time, 22.5% reduction in CO2 emissions, and 22.5% reduction in fuel consumption.",
     },
 ];
