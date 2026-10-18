@@ -28,6 +28,21 @@ export const projectsData: Project[] = [
             "Improved answer correctness by 32%, boosted retrieval relevance by 41% (RRF), and reduced hallucinations by 54%.",
     },
     {
+        id: "agentic-sql-analyst",
+        title: "Agentic AI Data Analyst (NL-to-SQL Platform)",
+        description:
+            "Enterprise-grade NL-to-SQL analytics platform built with LangGraph orchestration, SQLGlot AST security guardrails, and deterministic schema verification for interactive business intelligence.",
+        image: "/images/projects/agentic-sql-analyst.png",
+        link: "https://github.com/LakshyaJain08/agentic-sql-analyst",
+        github: "https://github.com/LakshyaJain08/agentic-sql-analyst",
+        tags: ["Agentic AI", "LangGraph", "NL-to-SQL", "SQLGlot", "FastAPI", "Data Analytics"],
+        techStack: ["LangGraph", "FastAPI", "SQLGlot", "SQLite / PostgreSQL", "Plotly", "TailwindCSS", "Python"],
+        problem:
+            "Non-technical stakeholders struggle with querying complex relational schemas, while standard LLM SQL generation introduces critical risks of destructive execution, SQL injection, and schema hallucinations.",
+        outcome:
+            "Achieved 100% benchmark execution accuracy across 105 test cases, 0.0% safety violation rate via AST guardrails, 100% ambiguity clarification rate, and 2.56ms median latency.",
+    },
+    {
         id: "retail-marketing-analysis",
         title: "Retail & Marketing Analytics (Customer Segmentation & CLV)",
         description:
