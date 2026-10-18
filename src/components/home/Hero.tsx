@@ -2,7 +2,7 @@
 
 import {useEffect, useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
-import {ArrowRight, FileText, Sparkles, TrendingDown, TrendingUp, ShieldCheck, BarChart3, ArrowUpRight} from "lucide-react";
+import {ArrowRight, FileText, Sparkles, TrendingDown, TrendingUp, ShieldCheck, BarChart3, ArrowUpRight, Database} from "lucide-react";
 import Link from "next/link";
 import {Magnetic} from "@/components/ui/Magnetic";
 import {getAssetPath} from "@/lib/imageLoader";
@@ -66,6 +66,20 @@ const IMPACT_METRICS = [
         detail: "LangGraph · +41% Relevance",
         icon: Sparkles,
         badgeClass: "text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 border-indigo-500/20",
+        href: "/#projects",
+    },
+    {
+        id: "agentic-sql-analyst",
+        value: 100,
+        decimals: 0,
+        prefix: "",
+        suffix: "%",
+        label: "Execution Accuracy",
+        discipline: "Agentic SQL",
+        project: "NL-to-SQL Agent",
+        detail: "105 Queries · -85% Turnaround",
+        icon: Database,
+        badgeClass: "text-blue-600 dark:text-blue-400 bg-blue-500/10 border-blue-500/20",
         href: "/#projects",
     },
     {
@@ -322,17 +336,14 @@ export default function Hero() {
                         </span>
                     </div>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-3.5 text-left">
-                        {IMPACT_METRICS.map((item, idx) => {
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-3.5 text-left">
+                        {IMPACT_METRICS.map((item) => {
                             const IconComponent = item.icon;
-                            const isLastOnMobile = idx === IMPACT_METRICS.length - 1;
                             return (
                                 <Link
                                     key={item.id}
                                     href={item.href}
-                                    className={`group relative p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-[#1c1917]/70 backdrop-blur-xl border border-stone-200/80 dark:border-stone-800/80 hover:border-indigo-500/50 dark:hover:border-indigo-500/50 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between overflow-hidden ${
-                                        isLastOnMobile ? "col-span-2 sm:col-span-1" : ""
-                                    }`}
+                                    className="group relative p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-[#1c1917]/70 backdrop-blur-xl border border-stone-200/80 dark:border-stone-800/80 hover:border-indigo-500/50 dark:hover:border-indigo-500/50 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between overflow-hidden"
                                 >
                                     <div className="flex items-center justify-between gap-1 mb-2">
                                         <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] sm:text-[11px] font-mono font-medium border ${item.badgeClass}`}>
