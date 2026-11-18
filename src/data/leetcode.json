@@ -1,11 +1,11 @@
 {
   "username": "ShubhamxGupta",
   "profileUrl": "https://leetcode.com/u/ShubhamxGupta/",
-  "updatedAt": "2026-11-17T05:53:32.501Z",
-  "ranking": 63083,
+  "updatedAt": "2026-11-18T05:21:14.905Z",
+  "ranking": 63115,
   "reputation": 888,
   "totalSolved": 832,
-  "totalQuestions": 4114,
+  "totalQuestions": 4115,
   "acceptanceRate": 84.8,
   "easy": {
     "solved": 486,
@@ -17,7 +17,7 @@
   },
   "hard": {
     "solved": 51,
-    "total": 990
+    "total": 991
   },
   "contest": {
     "rating": 1934,
